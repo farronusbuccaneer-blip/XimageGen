@@ -62,7 +62,7 @@ const CanvasPreview: React.FC<CanvasPreviewProps> = ({ state, onCharacterMove })
     }
     const link = document.createElement('a');
     link.href = finalDataUrl;
-    link.download = 'tips-image.png';
+    link.download = state.title.trim() ? `${state.title.trim()}.png` : 'tips-image.png';
     link.click();
   };
 
